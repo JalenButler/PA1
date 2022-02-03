@@ -11,7 +11,19 @@ namespace _321pa1
         {
             List<Songs> mySongsList = new List<Songs>();
 
-            StreamReader inFile = new StreamReader("songs.txt");
+            StreamReader inFile = null;
+            try
+            {
+                inFile = new StreamReader("songs.txt");
+            }
+            catch
+            {
+                Console.WriteLine("You boofed, and something went wrong");
+            }
+
+
+
+
             string line  = inFile.ReadLine();
 
             while(line != null)
