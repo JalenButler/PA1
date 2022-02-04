@@ -19,6 +19,7 @@ namespace _321pa1
             bool endProgram;
             do
             {
+                
                 Menu firstMenu = new Menu(){playlist = orgplaylist};
                 endProgram = firstMenu.menu();
 

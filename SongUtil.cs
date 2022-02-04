@@ -24,6 +24,7 @@ namespace _321pa1
             currentSong.Date = DateTime.Now;
 
             mySongsList.Add(currentSong);
+            mySongsList.Reverse();
 
 
 

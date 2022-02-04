@@ -16,9 +16,9 @@ namespace _321pa1
             {
                 inFile = new StreamReader("songs.txt");
             }
-            catch
+            catch(FieldAccessException e)
             {
-                Console.WriteLine("You boofed, and something went wrong");
+                Console.WriteLine("You boofed, and something went wrong {0}", e);
             }
 
 
@@ -32,6 +32,7 @@ namespace _321pa1
                 mySongsList.Add(new Songs(){ID = int.Parse(temp[0]), Title = temp[1], Date = DateTime.Parse(temp[2])});
                 line = inFile.ReadLine();
             }
+            mySongsList.Reverse();
 
             
 
@@ -45,6 +46,7 @@ namespace _321pa1
         {
             foreach(Songs song in mySongsList)
             {
+                
                 Console.WriteLine(song.ID + song.Title + song.Date);
             }
         }
